@@ -1,38 +1,44 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  height: 100%;
+  width: 100%;
+}
+
+#root {
+  height: 100%;
+  width: 100%;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  height: 100%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.title {
+  font-size: 4em;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.mondrianContainer {
+  padding-top: 3em;
+  padding-bottom: 3em;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  flex: 1;
+  justify-content: space-between;
+}
+
+#my-mondrian {
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.stripeContainer {
+  display: flex;
+  width: 500px;
+  border-left: 3px solid lightgrey;
 }
