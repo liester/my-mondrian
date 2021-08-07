@@ -124,9 +124,12 @@ const CheckoutForm = () => {
   const [processing, setProcessing] = useState(false)
   const [paymentMethod, setPaymentMethod] = useState(null)
   const [billingDetails, setBillingDetails] = useState({
-    email: '',
-    phone: '',
-    name: ''
+    address: '12 Temple Way',
+    email: 'levi.liester+test@gmail.com',
+    phone: '4022140959',
+    name: 'Levi L'
+    // state: 'Nebraska',
+    // zipCode: '68022'
   })
 
   const handleSubmit = async (event) => {
@@ -230,31 +233,31 @@ const CheckoutForm = () => {
                 id="address"
                 placeholder="42 Wallaby Way, Sydney"
                 required
-                value={billingDetails.address1}
+                value={billingDetails.address}
                 onChange={(e) => {
                   setBillingDetails({ ...billingDetails, address1: e.target.value })
                 }}
             />
-            <Field
-                label="State"
-                id="state"
-                placeholder="Nebraska"
-                required
-                value={billingDetails.state}
-                onChange={(e) => {
-                  setBillingDetails({ ...billingDetails, state: e.target.value })
-                }}
-            />
-            <Field
-                label="Zip Code"
-                id="zipCode"
-                placeholder="68022"
-                required
-                value={billingDetails.zipCode}
-                onChange={(e) => {
-                  setBillingDetails({ ...billingDetails, zipCode: e.target.value })
-                }}
-            />
+            {/* <Field */}
+            {/*    label="State" */}
+            {/*    id="state" */}
+            {/*    placeholder="Nebraska" */}
+            {/*    required */}
+            {/*    value={billingDetails.state} */}
+            {/*    onChange={(e) => { */}
+            {/*      setBillingDetails({ ...billingDetails, state: e.target.value }) */}
+            {/*    }} */}
+            {/* /> */}
+            {/* <Field */}
+            {/*    label="Zip Code" */}
+            {/*    id="zipCode" */}
+            {/*    placeholder="68122" */}
+            {/*    required */}
+            {/*    value={billingDetails.zipCode} */}
+            {/*    onChange={(e) => { */}
+            {/*      setBillingDetails({ ...billingDetails, zipCode: e.target.value }) */}
+            {/*    }} */}
+            {/* /> */}
         </fieldset>
         <fieldset className="FormGroup">
           <CardField
@@ -266,7 +269,7 @@ const CheckoutForm = () => {
         </fieldset>
         {error && <ErrorMessage>{error.message}</ErrorMessage>}
         <SubmitButton processing={processing} error={error} disabled={!stripe}>
-          Pay $9.99
+          Order $9.99
         </SubmitButton>
       </form>
       )

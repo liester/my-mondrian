@@ -11,7 +11,7 @@ import CheckoutForm from './checkout-form/CheckoutForm'
 
 const mondrianContainerId = 'my-mondrian'
 
-const stripePromise = loadStripe('pk_test_6pRNASCoBOKtIshFeQd4XMUh')
+const stripePromise = loadStripe('pk_test_wRF6cGM6D9azfHyN4dWcDXPG')
 
 function App () {
   let mondrian
